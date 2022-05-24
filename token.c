@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #include "global.h"
@@ -77,6 +78,9 @@ struct token next_token(){
 			if(char_index("0123456789", c) >= 0){
 				t.token = T_INT_LITERAL;
 				t.intvalue = scan_int(c);
+			}else{
+				printf("Error: unknown token `%c` at (%i, %i)\n", c, Line, CharPosition-1);
+				exit(1);
 			}
 	}
 

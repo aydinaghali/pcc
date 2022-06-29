@@ -31,8 +31,6 @@ int main(int argc, char** argv){
 			}
 		}
 	}
-
-	printf("Haha a change")	
 	
 	return 0;
 }
